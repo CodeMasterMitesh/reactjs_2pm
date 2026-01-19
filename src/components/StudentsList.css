@@ -1,0 +1,31 @@
+.student-heading{
+    color: blue;
+    text-align: center;
+}
+.student-list{
+    width: 100%;
+}
+.student-list .student-list-data{
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.student-list .student-list-data li{
+    margin: 0 15px;
+    width: 25%;
+    padding: 10px;
+    border: 1px solid black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.student-list .student-list-data li span{
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+    vertical-align: middle;
+}
