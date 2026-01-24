@@ -3,6 +3,7 @@ import FragmentExample from './components/Fragment.jsx';
 import React, { Fragment } from 'react';
 import LoopExample from './components/LoopsInReact.jsx';
 import Nav from './components/Nav.jsx';
+import { EventHandling } from './components/EventHandling.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -32,6 +33,7 @@ export const App = () => {
       </>
       {/* </Fragment> */}
       {/* </React.Fragment> */}
+      <EventHandling />
     </>
 
   )
