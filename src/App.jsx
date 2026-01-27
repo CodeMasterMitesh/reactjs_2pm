@@ -4,6 +4,7 @@ import React, { Fragment } from 'react';
 import LoopExample from './components/LoopsInReact.jsx';
 import Nav from './components/Nav.jsx';
 import { EventHandling } from './components/EventHandling.jsx';
+import {EventPassAsProps} from './components/EventPassAsProps.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -34,6 +35,7 @@ export const App = () => {
       {/* </Fragment> */}
       {/* </React.Fragment> */}
       <EventHandling />
+      <EventPassAsProps />
     </>
 
   )
