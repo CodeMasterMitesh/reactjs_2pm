@@ -1,16 +1,16 @@
 export const EventPropagation = () => {
     const grandParentEvent = (e) => {
-        console.log(e);
+        // console.log(e);
         e.stopPropagation();
         alert('GrandParent Div Clicked');
     }
     const parentEvent = (e) => {
-        console.log(e);
+        // console.log(e);
         e.stopPropagation();
         alert('Parent Div Clicked');
     }
     const childEvent = (e) => {
-        console.log(e);
+        // console.log(e);
         e.stopPropagation();
         alert('Child Div Clicked');
     }

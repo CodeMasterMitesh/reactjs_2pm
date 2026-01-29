@@ -1,7 +1,7 @@
 import StudentListCss from './StudentsList.module.css';
-console.log(StudentListCss);
+// console.log(StudentListCss);
 const studentSData = [
-    { id: 1, name: "Alice", age: 20 , Grade: 'A'},
+    { id: 1, name: "Alice", age: 30 , Grade: 'A'},
     { id: 2, name: "Bob", age: 22 , Grade: 'B'},
     { id: 3, name: "Charlie", age: 23 , Grade: 'C'},
     { id: 4, name: "David", age: 21 , Grade: 'B'},

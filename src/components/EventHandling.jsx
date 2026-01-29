@@ -7,8 +7,8 @@ export const EventHandling = () => {
     // this is event handler function method 2 (arrow function)
 
     const eventHandler = (event) => {
-        console.log(event);
-        console.log(event.target);
+        // console.log(event);
+        // console.log(event.target);
         alert("Button Clicked! Event Handling in ReactJS");
     }
 

@@ -6,6 +6,7 @@ import Nav from './components/Nav.jsx';
 import { EventHandling } from './components/EventHandling.jsx';
 import {EventPassAsProps} from './components/EventPassAsProps.jsx';
 import { EventPropagation } from './components/EventPropogation.jsx';
+import {StateManage} from './components/State.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -19,7 +20,7 @@ import { EventPropagation } from './components/EventPropogation.jsx';
 export const App = () => {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       {/* <React.Fragment> */}
       {/* <Fragment> */}
       <>
@@ -31,13 +32,14 @@ export const App = () => {
       <Button name="LinkedIn" link="https://www.linkedin.com"/>
       <Button name="GitHub" link="https://www.github.com"/>
       <FragmentExample/> */}
-        <LoopExample />
+        {/* <LoopExample /> */}
       </>
       {/* </Fragment> */}
       {/* </React.Fragment> */}
       {/* <EventHandling />
       <EventPassAsProps /> */}
-      <EventPropagation />
+      {/* <EventPropagation /> */}
+      <StateManage />
     </>
 
   )
