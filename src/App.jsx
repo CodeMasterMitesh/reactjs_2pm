@@ -7,6 +7,7 @@ import { EventHandling } from './components/EventHandling.jsx';
 import {EventPassAsProps} from './components/EventPassAsProps.jsx';
 import { EventPropagation } from './components/EventPropogation.jsx';
 import {StateManage} from './components/State.jsx';
+import StateManageWithObj from './components/StateManageWithObj.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -39,7 +40,8 @@ export const App = () => {
       {/* <EventHandling />
       <EventPassAsProps /> */}
       {/* <EventPropagation /> */}
-      <StateManage />
+      {/* <StateManage /> */}
+      <StateManageWithObj />
     </>
 
   )
