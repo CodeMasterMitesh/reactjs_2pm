@@ -8,6 +8,7 @@ import {EventPassAsProps} from './components/EventPassAsProps.jsx';
 import { EventPropagation } from './components/EventPropogation.jsx';
 import {StateManage} from './components/State.jsx';
 import StateManageWithObj from './components/StateManageWithObj.jsx';
+import FormWithUseState from './components/FormWithUseState.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -41,7 +42,8 @@ export const App = () => {
       <EventPassAsProps /> */}
       {/* <EventPropagation /> */}
       {/* <StateManage /> */}
-      <StateManageWithObj />
+      {/* <StateManageWithObj /> */}
+      <FormWithUseState />
     </>
 
   )
