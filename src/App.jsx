@@ -9,6 +9,7 @@ import { EventPropagation } from './components/EventPropogation.jsx';
 import {StateManage} from './components/State.jsx';
 import StateManageWithObj from './components/StateManageWithObj.jsx';
 import FormWithUseState from './components/FormWithUseState.jsx';
+import UseEffectHook from './components/UseEffectHook.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -43,7 +44,8 @@ export const App = () => {
       {/* <EventPropagation /> */}
       {/* <StateManage /> */}
       {/* <StateManageWithObj /> */}
-      <FormWithUseState />
+      {/* <FormWithUseState /> */}
+      <UseEffectHook />
     </>
 
   )
