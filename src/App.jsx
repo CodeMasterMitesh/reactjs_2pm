@@ -10,6 +10,8 @@ import {StateManage} from './components/State.jsx';
 import StateManageWithObj from './components/StateManageWithObj.jsx';
 import FormWithUseState from './components/FormWithUseState.jsx';
 import UseEffectHook from './components/UseEffectHook.jsx';
+import { UseEffectExample } from './components/UseEffectExample.jsx';
+import { UseEffectGetCompany } from './components/UseEffectGetCompnay.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -45,7 +47,9 @@ export const App = () => {
       {/* <StateManage /> */}
       {/* <StateManageWithObj /> */}
       {/* <FormWithUseState /> */}
-      <UseEffectHook />
+      {/* <UseEffectHook /> */}
+      {/* <UseEffectExample/> */}
+      <UseEffectGetCompany />
     </>
 
   )
