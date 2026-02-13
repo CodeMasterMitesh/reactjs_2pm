@@ -12,6 +12,7 @@ import FormWithUseState from './components/FormWithUseState.jsx';
 import UseEffectHook from './components/UseEffectHook.jsx';
 import { UseEffectExample } from './components/UseEffectExample.jsx';
 import { UseEffectGetCompany } from './components/UseEffectGetCompnay.jsx';
+import CleanupInUseEffect from './components/CleanupInUseEffect.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -49,9 +50,10 @@ export const App = () => {
       {/* <FormWithUseState /> */}
       {/* <UseEffectHook /> */}
       {/* <UseEffectExample/> */}
-      <UseEffectGetCompany />
+      {/* <UseEffectGetCompany /> */}
+      <CleanupInUseEffect />
     </>
 
   )
-
+  
 }
