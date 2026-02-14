@@ -13,6 +13,8 @@ import UseEffectHook from './components/UseEffectHook.jsx';
 import { UseEffectExample } from './components/UseEffectExample.jsx';
 import { UseEffectGetCompany } from './components/UseEffectGetCompnay.jsx';
 import CleanupInUseEffect from './components/CleanupInUseEffect.jsx';
+import UseEffectDependancyArray from './components/UseEffectDependancyArray.jsx';
+import UseRefHook from './components/useRefHook.jsx';
 // function App(){
 //   return(
 //     <div>
@@ -51,7 +53,9 @@ export const App = () => {
       {/* <UseEffectHook /> */}
       {/* <UseEffectExample/> */}
       {/* <UseEffectGetCompany /> */}
-      <CleanupInUseEffect />
+      {/* <CleanupInUseEffect /> */}
+      {/* <UseEffectDependancyArray/> */}
+      <UseRefHook />
     </>
 
   )
