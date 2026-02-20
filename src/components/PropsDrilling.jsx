@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { myContext } from './ContextApi.jsx'
+
 export const PropsDrilling = () =>{
     return (
 
@@ -29,10 +32,13 @@ export const GrandchildCompo = (props) =>{
 }
 
 export const GrandGrandchildCompo = (props) =>{
+    const data = useContext(myContext);
+    // console.log(data);
     return (
         <div>
             <h1>This is Grand Grand Child Componenet</h1>
-            <p>{props.data}</p>
+            <p>{data.data1}</p>
+            <p>{data.data2}</p>
         </div>
     )
 }
