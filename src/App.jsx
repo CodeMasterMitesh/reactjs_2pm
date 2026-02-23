@@ -16,6 +16,7 @@ import CleanupInUseEffect from './components/CleanupInUseEffect.jsx';
 import UseEffectDependancyArray from './components/UseEffectDependancyArray.jsx';
 import UseIdHooks from './components/UseIdHooks.jsx';
 import { PropsDrilling } from './components/PropsDrilling.jsx';
+import { UseReducerHooks } from './components/useReducerHooks.jsx';
 // import UseRefHook from './components/useRefHook.jsx';
 // function App(){
 //   return(
@@ -59,7 +60,8 @@ export const App = () => {
       {/* <UseEffectDependancyArray/> */}
       {/* <UseRefHook /> */}
        {/* <UseIdHooks/ > */}
-       <PropsDrilling/>
+       {/* <PropsDrilling/> */}
+       <UseReducerHooks/>
     </>
 
   )
