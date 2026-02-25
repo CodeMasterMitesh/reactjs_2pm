@@ -17,6 +17,7 @@ import UseEffectDependancyArray from './components/UseEffectDependancyArray.jsx'
 import UseIdHooks from './components/UseIdHooks.jsx';
 import { PropsDrilling } from './components/PropsDrilling.jsx';
 import { UseReducerHooks } from './components/useReducerHooks.jsx';
+import { Memo } from './components/Memo.jsx';
 // import UseRefHook from './components/useRefHook.jsx';
 // function App(){
 //   return(
@@ -61,7 +62,8 @@ export const App = () => {
       {/* <UseRefHook /> */}
        {/* <UseIdHooks/ > */}
        {/* <PropsDrilling/> */}
-       <UseReducerHooks/>
+       {/* <UseReducerHooks/> */}
+       <Memo />
     </>
 
   )
