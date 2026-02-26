@@ -18,6 +18,7 @@ import UseIdHooks from './components/UseIdHooks.jsx';
 import { PropsDrilling } from './components/PropsDrilling.jsx';
 import { UseReducerHooks } from './components/useReducerHooks.jsx';
 import { Memo } from './components/Memo.jsx';
+import { UseMemoHooks } from './components/UseMemoHooks.jsx';
 // import UseRefHook from './components/useRefHook.jsx';
 // function App(){
 //   return(
@@ -63,7 +64,8 @@ export const App = () => {
        {/* <UseIdHooks/ > */}
        {/* <PropsDrilling/> */}
        {/* <UseReducerHooks/> */}
-       <Memo />
+       {/* <Memo /> */}
+       <UseMemoHooks/>
     </>
 
   )
