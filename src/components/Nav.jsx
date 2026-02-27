@@ -4,10 +4,10 @@ const Nav = () => {
         <nav className="nav-bar">
             <h2 className="nav-title">My Website</h2>
             <ul className="nav-links">
-                <NavLink name="Home" link="" />
-                <NavLink name="About" link="" />
-                <NavLink name="Blog" link="" />
-                <NavLink name="Contact" link="" />
+                <NavLink name="Home" link="/" />
+                <NavLink name="About" link="/about" />
+                <NavLink name="Product" link="/product" />
+                <NavLink name="Contact" link="/contact" />
             </ul>
         </nav>
     );

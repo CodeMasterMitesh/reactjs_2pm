@@ -19,6 +19,10 @@ import { PropsDrilling } from './components/PropsDrilling.jsx';
 import { UseReducerHooks } from './components/useReducerHooks.jsx';
 import { Memo } from './components/Memo.jsx';
 import { UseMemoHooks } from './components/UseMemoHooks.jsx';
+import { createBrowserRouter, Route, RouterProvider } from 'react-router';
+import Home from './Home.jsx';
+import About from './About.jsx';
+import Contact from './Contact.jsx';
 // import UseRefHook from './components/useRefHook.jsx';
 // function App(){
 //   return(
@@ -30,9 +34,29 @@ import { UseMemoHooks } from './components/UseMemoHooks.jsx';
 
 // export default App;
 
+const route = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home/>
+  },
+  {
+    path: '/about',
+    element: <About />
+  },
+  {
+    path: '/product',
+    element: <h1>This is Product Page</h1>
+  },
+  {
+    path: '/contact',
+    element: <Contact />
+  },
+]);
+
 export const App = () => {
   return (
     <>
+     <RouterProvider router={route}/>
       {/* <Nav /> */}
       {/* <React.Fragment> */}
       {/* <Fragment> */}
@@ -65,7 +89,7 @@ export const App = () => {
        {/* <PropsDrilling/> */}
        {/* <UseReducerHooks/> */}
        {/* <Memo /> */}
-       <UseMemoHooks/>
+       {/* <UseMemoHooks/> */}
     </>
 
   )
