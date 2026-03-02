@@ -1,9 +1,7 @@
 import { Button } from "./components/Hello.jsx";
-import Nav from "./components/Nav.jsx";
 const About = () => {
     return (
         <div>
-             <Nav/>
             <Button link="https://www.facebook.com" name="FaceBook"/>
              <h1>This is About Page</h1>
         </div>

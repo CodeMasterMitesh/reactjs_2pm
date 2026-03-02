@@ -4,9 +4,9 @@ import React, { Fragment } from 'react';
 import LoopExample from './components/LoopsInReact.jsx';
 import Nav from './components/Nav.jsx';
 import { EventHandling } from './components/EventHandling.jsx';
-import {EventPassAsProps} from './components/EventPassAsProps.jsx';
+import { EventPassAsProps } from './components/EventPassAsProps.jsx';
 import { EventPropagation } from './components/EventPropogation.jsx';
-import {StateManage} from './components/State.jsx';
+import { StateManage } from './components/State.jsx';
 import StateManageWithObj from './components/StateManageWithObj.jsx';
 import FormWithUseState from './components/FormWithUseState.jsx';
 import UseEffectHook from './components/UseEffectHook.jsx';
@@ -19,10 +19,11 @@ import { PropsDrilling } from './components/PropsDrilling.jsx';
 import { UseReducerHooks } from './components/useReducerHooks.jsx';
 import { Memo } from './components/Memo.jsx';
 import { UseMemoHooks } from './components/UseMemoHooks.jsx';
-import { createBrowserRouter, Route, RouterProvider } from 'react-router';
+import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from 'react-router';
 import Home from './Home.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx';
+import { AppLayout } from './components/AppLayout.jsx';
 // import UseRefHook from './components/useRefHook.jsx';
 // function App(){
 //   return(
@@ -34,29 +35,61 @@ import Contact from './Contact.jsx';
 
 // export default App;
 
+
 const route = createBrowserRouter([
+  // {
+  //   path: '/',
+  //   element: <Home/>
+  // },
+  // {
+  //   path: '/about',
+  //   element: <About />
+  // },
+  // {
+  //   path: '/product',
+  //   element: <h1>This is Product Page</h1>
+  // },
+  // {
+  //   path: '/contact',
+  //   element: <Contact />
+  // },
+
   {
     path: '/',
-    element: <Home/>
-  },
-  {
-    path: '/about',
-    element: <About />
-  },
-  {
-    path: '/product',
-    element: <h1>This is Product Page</h1>
-  },
-  {
-    path: '/contact',
-    element: <Contact />
-  },
+    element : <AppLayout/>,
+    children :[
+        {
+          path: '/',
+          element: <Home/>
+        },
+        {
+          path: '/about',
+          element: <About />
+        },
+        {
+          path: '/product',
+          element: <h1>This is Product Page</h1>
+        },
+        {
+          path: '/contact',
+          element: <Contact />
+        },
+    ]
+  }
 ]);
 
 export const App = () => {
   return (
     <>
-     <RouterProvider router={route}/>
+    {/* <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/product' element={<h1>This is Product Page</h1>} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+    </BrowserRouter> */}
+      <RouterProvider router={route}/>
       {/* <Nav /> */}
       {/* <React.Fragment> */}
       {/* <Fragment> */}
@@ -85,13 +118,13 @@ export const App = () => {
       {/* <CleanupInUseEffect /> */}
       {/* <UseEffectDependancyArray/> */}
       {/* <UseRefHook /> */}
-       {/* <UseIdHooks/ > */}
-       {/* <PropsDrilling/> */}
-       {/* <UseReducerHooks/> */}
-       {/* <Memo /> */}
-       {/* <UseMemoHooks/> */}
+      {/* <UseIdHooks/ > */}
+      {/* <PropsDrilling/> */}
+      {/* <UseReducerHooks/> */}
+      {/* <Memo /> */}
+      {/* <UseMemoHooks/> */}
     </>
 
   )
-  
+
 }
