@@ -22,3 +22,8 @@
     margin: 0 15px;
     font-size: 18px;
 }
+
+.nav-bar .nav-links .nav-item .active{
+    background-color: lightcoral;
+    padding: 10px;
+}
