@@ -24,6 +24,7 @@ import Home from './Home.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx';
 import { AppLayout } from './components/AppLayout.jsx';
+import {ErrorPage} from './ErrorPage.jsx';
 // import UseRefHook from './components/useRefHook.jsx';
 // function App(){
 //   return(
@@ -57,6 +58,7 @@ const route = createBrowserRouter([
   {
     path: '/',
     element : <AppLayout/>,
+    errorElement : <ErrorPage/>,
     children :[
         {
           path: '/',
