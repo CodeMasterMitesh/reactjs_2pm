@@ -1,0 +1,32 @@
+.wether_cell{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.wether_cell form{
+    width: 350px;
+    height: 350px;
+    background-color: rgb(44, 26, 0);
+    border: 0px solid black;
+    border-radius: 10px;
+    padding:20px;
+}
+.wether_cell form .form_input{
+    width: 100%;
+}
+.wether_cell form .form_input label{
+    width: 100%;
+    color: white;
+}
+.wether_cell form .form_input input{
+    width: 100%;
+    padding: 5px;
+    display: block;
+    border-radius: 5px;
+    border: none;
+}
+.wether_cell form .from_btn{
+    
+}

@@ -25,6 +25,7 @@ import About from './About.jsx';
 import Contact from './Contact.jsx';
 import { AppLayout } from './components/AppLayout.jsx';
 import {ErrorPage} from './ErrorPage.jsx';
+import WetherApp from './WetherApp.jsx';
 // import UseRefHook from './components/useRefHook.jsx';
 // function App(){
 //   return(
@@ -75,6 +76,10 @@ const route = createBrowserRouter([
         {
           path: '/contact',
           element: <Contact />
+        },
+        {
+          path: '/wetherapp',
+          element: <WetherApp />
         },
     ]
   }
