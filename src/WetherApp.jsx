@@ -22,9 +22,11 @@ const WetherApp = () => {
         // console.log(APIURL);
         try {
             const response = await fetch(APIURL);
+            console.log(response);
             const data = await response.json();
+            // console.log(data);
 
-            if (!response.ok) {
+            if (response.ok === false) {
                 setWeatherData(null)
                 setError(data?.message || 'City not found.')
                 return;
@@ -57,7 +59,7 @@ const WetherApp = () => {
                             name="city"
                             placeholder="e.g. Ahmedabad"
                             autoComplete="off"
-                            ref={cityref}                        />
+                            ref={cityref}/>
                     </div>
 
                     <button type="submit" className={WetherAppcss.from_btn}>Check Weather</button>
