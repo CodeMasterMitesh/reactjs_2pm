@@ -10,7 +10,7 @@ const Nav = () => {
                 <MenuItems name="About" link="/about" />
                 <MenuItems name="Product" link="/product" />
                 <MenuItems name="Contact" link="/contact" />
-                <MenuItems name="WetherApp" link="/WetherApp" />
+                <MenuItems name="WeatherApp" link="/weatherapp" />
             </ul>
         </nav>
     );

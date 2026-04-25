@@ -78,7 +78,7 @@ const route = createBrowserRouter([
           element: <Contact />
         },
         {
-          path: '/wetherapp',
+          path: '/weatherapp',
           element: <WetherApp />
         },
     ]
