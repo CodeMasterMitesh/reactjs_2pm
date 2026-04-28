@@ -1,0 +1,232 @@
+:root {
+    --bg-1: #fff7e6;
+    --bg-2: #fffcf5;
+    --accent: #c47f00;
+    --accent-dark: #9a6300;
+    --text-main: #2d1f00;
+    --text-soft: #6b4f1a;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --border-soft: rgba(45, 31, 0, 0.12);
+}
+
+.currency_cell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background:
+        radial-gradient(circle at 15% 15%, #ffe5a0 0%, transparent 38%),
+        radial-gradient(circle at 88% 85%, #ffd6b0 0%, transparent 34%),
+        linear-gradient(140deg, var(--bg-1), var(--bg-2));
+    font-family: "Manrope", "Nunito Sans", sans-serif;
+}
+
+.currency_card {
+    width: min(100%, 440px);
+    border: 1px solid var(--border-soft);
+    border-radius: 24px;
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 18px 40px rgba(100, 60, 0, 0.14);
+    padding: 28px 24px;
+    animation: fade-up 450ms ease-out;
+}
+
+.card_header h1 {
+    margin: 0;
+    font-size: 1.65rem;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.card_header p {
+    margin: 8px 0 0;
+    color: var(--text-soft);
+    font-size: 0.95rem;
+}
+
+/* ── form ── */
+.currency_form {
+    margin-top: 22px;
+}
+
+.form_input label {
+    display: block;
+    color: var(--text-main);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form_input input {
+    width: 100%;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+    box-sizing: border-box;
+}
+
+.form_input input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(196, 127, 0, 0.14);
+}
+
+/* hide number spin buttons */
+.form_input input::-webkit-outer-spin-button,
+.form_input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ── select row ── */
+.select_row {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.select_group {
+    flex: 1;
+}
+
+.select_group label {
+    display: block;
+    color: var(--text-main);
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.select_group select {
+    width: 100%;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 11px 12px;
+    font-size: 0.95rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--text-main);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b4f1a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.select_group select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(196, 127, 0, 0.14);
+}
+
+/* ── swap button ── */
+.swap_btn {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border-soft);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--accent-dark);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: background 170ms ease, transform 170ms ease, box-shadow 170ms ease;
+    margin-bottom: 1px;
+}
+
+.swap_btn:hover {
+    background: rgba(196, 127, 0, 0.12);
+    transform: rotate(180deg);
+    box-shadow: 0 4px 12px rgba(196, 127, 0, 0.18);
+}
+
+/* ── convert button ── */
+.convert_btn {
+    width: 100%;
+    margin-top: 18px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--accent), #e8a000);
+    cursor: pointer;
+    transition: transform 170ms ease, box-shadow 170ms ease;
+}
+
+.convert_btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(196, 127, 0, 0.3);
+}
+
+.convert_btn:active {
+    transform: translateY(0);
+}
+
+/* ── result preview ── */
+.result_preview {
+    margin-top: 20px;
+    border-radius: 16px;
+    padding: 18px;
+    background: linear-gradient(140deg, rgba(196, 127, 0, 0.1), rgba(232, 160, 0, 0.07));
+    border: 1px solid rgba(196, 127, 0, 0.2);
+}
+
+.result_preview h2 {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.result_value {
+    margin: 8px 0 2px;
+    color: var(--text-main);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.result_label {
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ── animation ── */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── responsive ── */
+@media (max-width: 480px) {
+    .currency_cell {
+        padding: 14px;
+    }
+
+    .currency_card {
+        border-radius: 18px;
+        padding: 18px;
+    }
+
+    .card_header h1 {
+        font-size: 1.45rem;
+    }
+}

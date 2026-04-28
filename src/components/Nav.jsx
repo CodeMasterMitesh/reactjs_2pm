@@ -11,6 +11,7 @@ const Nav = () => {
                 <MenuItems name="Product" link="/product" />
                 <MenuItems name="Contact" link="/contact" />
                 <MenuItems name="WeatherApp" link="/weatherapp" />
+                <MenuItems name="CurrencyConverter" link="/currencyconverter" />
             </ul>
         </nav>
     );
