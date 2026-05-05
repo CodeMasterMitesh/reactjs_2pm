@@ -85,7 +85,8 @@ const route = createBrowserRouter([
         {
           path: '/currencyconverter',
           element: <CurrencyConverter />
-        }
+        },
+       
     ]
   }
 ]);

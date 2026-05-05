@@ -5,13 +5,13 @@ import React, { useReducer } from 'react';
 
 export const UseReducerHooks = () => {
     const reducer =  (state,action) =>{
-        // console.log(state,action);
+        console.log(state,action);
         if(action.type === 'INCREMENT'){
-            return state + 1;
+            return state + action.no;
         }
 
         if(action.type === 'DECREMENT'){
-            return state - 1;
+            return state - action.no;
         }
     }
     // const [count , setCount] = useState(0);
@@ -23,8 +23,8 @@ export const UseReducerHooks = () => {
         <div>
             <h1>UseReducerHooks Component</h1>
             <p>Count : {count}</p>
-            <button onClick={()=> dispatch({type : 'INCREMENT'})}>Increment</button>
-            <button onClick={()=> dispatch({type : 'DECREMENT'})}>Decrement</button>
+            <button onClick={()=> dispatch({type : 'INCREMENT',no : 1})}>Increment</button>
+            <button onClick={()=> dispatch({type : 'DECREMENT',no : 1})}>Decrement</button>
         </div>
     )
 }
