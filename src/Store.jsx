@@ -1,4 +1,5 @@
 import react from "react";
+import { createStore } from "redux";
 // todo app : create store and reducer for task management
 const ADD_TASK = 'add/task';
 const DELETE_TASK = 'delete/task';
@@ -8,7 +9,7 @@ const initialState = {
 }
 
 const TaskReducer = (state = initialState, action) => {
-    console.log(state,action);
+    // console.log(state,action);
     switch(action.type){
         case ADD_TASK :
             return{
@@ -17,11 +18,43 @@ const TaskReducer = (state = initialState, action) => {
 
         case DELETE_TASK : 
             return{
-                ...state, task : state.task.filter((task) => task.id !== action.payload)
+                ...state, task : state.task.filter((curre,index) => index != action.payload)
             }
         default:
             return state;
     }
 }
 
-export default TaskReducer;
+
+
+const store = createStore(TaskReducer);
+
+const addTask = (data) =>{
+    return(
+        {type :ADD_TASK , payload : data}
+    )
+}
+
+
+const deleteTask = (data) =>{
+    return(
+        {type :DELETE_TASK , payload : data}
+    )
+}
+
+console.log("get store info")
+console.log("initialState", store.getState());
+
+
+store.dispatch(addTask("My Name is mitesh"));
+console.log("updated states", store.getState());
+
+
+store.dispatch(addTask("Hello Mitesh How are you?"));
+console.log("updated states", store.getState());
+
+store.dispatch(deleteTask(0));
+console.log("deleted states", store.getState());
+
+
+
