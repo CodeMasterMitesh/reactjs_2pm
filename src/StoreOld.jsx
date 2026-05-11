@@ -27,34 +27,34 @@ const TaskReducer = (state = initialState, action) => {
 
 
 
-export const store = createStore(TaskReducer);
+const store = createStore(TaskReducer);
 
-export const addTask = (data) =>{
+const addTask = (data) =>{
     return(
         {type :ADD_TASK , payload : data}
     )
 }
 
 
-export const deleteTask = (data) =>{
+const deleteTask = (data) =>{
     return(
         {type :DELETE_TASK , payload : data}
     )
 }
 
-// console.log("get store info")
-// console.log("initialState", store.getState());
+console.log("get store info")
+console.log("initialState", store.getState());
 
 
-// store.dispatch(addTask("My Name is mitesh"));
-// console.log("updated states", store.getState());
+store.dispatch(addTask("My Name is mitesh"));
+console.log("updated states", store.getState());
 
 
-// store.dispatch(addTask("Hello Mitesh How are you?"));
-// console.log("updated states", store.getState());
+store.dispatch(addTask("Hello Mitesh How are you?"));
+console.log("updated states", store.getState());
 
-// store.dispatch(deleteTask(0));
-// console.log("deleted states", store.getState());
+store.dispatch(deleteTask(0));
+console.log("deleted states", store.getState());
 
 
 

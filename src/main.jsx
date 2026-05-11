@@ -3,10 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './style.css'
 import { App } from './App.jsx'
 import { ContextApi } from './components/ContextApi.jsx';
+import { Provider } from 'react-redux';
+import { store } from './Store.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ContextApi>
+    <Provider store={store}>
         <App />
-    </ContextApi>
-  </StrictMode>,
+    </Provider>
+  </StrictMode>
 )
