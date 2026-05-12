@@ -1,34 +1,25 @@
 import { useState } from 'react';
 import './Todo.css';
 import { useSelector } from 'react-redux';
-import { store } from '../Store.jsx';
+import {addTask,deleteTask , store} from '../Store.jsx';
 
-console.log("store in todo", store);
-const tasks = [
-  {
-    title: 'Review React notes',
-    detail: 'Finish hooks summary and mark tricky examples.',
-    time: '09:30 AM',
-    tag: 'Study',
-    priority: 'High',
-    done: true,
-  },
-];
 
 const Todo = () => {
   
   const tasks = useSelector((state) => state.task);
+  // console.log("state of store" ,tasks);
+
   const [task, setTask] = useState("");
+
   const completedTasks = tasks.filter((task) => task.done).length;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted task", task);
-    // if(task.trim() === "") return;
-    // store.dispatch({type : "add/task", payload : {title : task, detail : "No details", time : "10:00 AM", tag : "General", priority : "Low", done : false}});
-    // setTask("");
+    // console.log("submitted task", task);
+    store.dispatch(addTask(task));
+    setTask("");
   }
-  console.log("store in todo", store);
+  // console.log("store in todo", store);
 
   return (
     <main className="todo-shell">
@@ -73,7 +64,7 @@ const Todo = () => {
             </div>
             <span className="todo-date-pill">Friday, May 8</span>
           </header>
-          <form action={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <div className="todo-composer" aria-label="Add task form preview">
               <div className="todo-input-box">
                 <span className="todo-input-label">New task</span>
@@ -91,20 +82,21 @@ const Todo = () => {
           </div>
 
           <div className="todo-task-list">
-            {tasks.map((task) => (
-              <article className={`todo-task-card ${task.done ? 'done' : ''}`} key={task.title}>
+            {tasks.map((task,index) => (
+              <article className={`todo-task-card ${task.done ? 'done' : ''}`} key={index}>
                 <span className="todo-check">✓</span>
                 <div>
-                  <h3 className="todo-task-title">{task.title}</h3>
-                  <p className="todo-task-detail">{task.detail}</p>
-                  <p className="todo-task-meta">
+                  <h3 className="todo-task-title">{task}</h3>
+                  {/* <p className="todo-task-detail">{task.detail}</p> */}
+                  {/* <p className="todo-task-meta">
                     <span>{task.time}</span>
                     <span className="todo-chip">{task.tag}</span>
-                  </p>
+                  </p> */}
+                  <button onClick={() => store.dispatch(deleteTask(index))}>Del</button>
                 </div>
-                <span className={`todo-priority ${task.priority.toLowerCase()}`}>
+                {/* <span className={`todo-priority ${task.priority.toLowerCase()}`}>
                   {task.priority}
-                </span>
+                </span> */}
               </article>
             ))}
           </div>

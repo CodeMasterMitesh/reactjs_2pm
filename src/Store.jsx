@@ -49,6 +49,12 @@ export const deleteTask = (data) =>{
 // store.dispatch(addTask("My Name is mitesh"));
 // console.log("updated states", store.getState());
 
+// store.dispatch(addTask("Hello How Are You?"));
+// console.log("updated states", store.getState());
+
+
+// store.dispatch(addTask("I am on the way"));
+// console.log("updated states", store.getState());
 
 // store.dispatch(addTask("Hello Mitesh How are you?"));
 // console.log("updated states", store.getState());
