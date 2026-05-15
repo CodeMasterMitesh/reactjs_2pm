@@ -1,12 +1,11 @@
 import react from "react";
-import { createStore , applyMiddleware } from "redux";
-import { composeWithDevTools } from '@redux-devtools/extension';
+import { createStore } from "redux";
 // todo app : create store and reducer for task management
 const ADD_TASK = 'add/task';
 const DELETE_TASK = 'delete/task';
 
 const initialState = {
-    task : [],
+    task : []
 }
 
 const TaskReducer = (state = initialState, action) => {
@@ -28,7 +27,7 @@ const TaskReducer = (state = initialState, action) => {
 
 
 
-export const store = createStore(TaskReducer,composeWithDevTools());
+export const store = createStore(TaskReducer);
 
 export const addTask = (data) =>{
     return(
