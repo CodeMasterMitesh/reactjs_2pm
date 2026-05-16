@@ -1,0 +1,4 @@
+Redux Thunk is a middleware that allows Redux to handle asynchronous logic (like API calls) by enabling action creators to return a function instead of a plain object. It receives dispatch and getState as arguments, enabling complex logic, data fetching, and multiple action dispatches
+
+
+Key Aspects of Redux Thunk:Asynchronous Actions: Enables API requests or delays in dispatching actions.Action Creator Functions: Instead of { type: '...' }, you can dispatch a function: (dispatch, getState) => { ... }.Middleware Integration: It intercepts functions and calls them, allowing synchronous actions to be dispatched once the asynchronous task completes.Usage: Commonly used for data fetching, checking state before dispatching (getState), or triggering multiple actions in a sequence

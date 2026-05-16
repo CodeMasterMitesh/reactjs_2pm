@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Todo.css';
 import { useSelector } from 'react-redux';
 import {addTask,deleteTask , store} from '../Store.jsx';
+import {fetchTask} from '../Store.jsx';
 
 
 const Todo = () => {
@@ -20,7 +21,10 @@ const Todo = () => {
     setTask("");
   }
   // console.log("store in todo", store);
-
+  const fetchTaskHandler = () => {
+    console.log("fetch task");
+    store.dispatch(fetchTask());
+  }
   return (
     <main className="todo-shell">
       <section className="todo-app" aria-label="Todo app preview">
@@ -73,6 +77,7 @@ const Todo = () => {
               <button type='submit' className="todo-add-button">Add Task</button>
             </div>
           </form>
+          <button onClick={fetchTaskHandler} className="todo-add-button" style={{padding: '5px',width: '150px',margin : '10px 0',backgroundColor :'#4CAF50'}}>Fetch Task</button>
 
           <div className="todo-filter-bar" aria-label="Task filters">
             <button className="active">All Tasks</button>
